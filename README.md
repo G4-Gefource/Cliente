@@ -1,2 +1,2 @@
 # Cliente
-Protóripos da versão do cliente do Eventum
+Protóripos para testes da versão do cliente do Eventum
