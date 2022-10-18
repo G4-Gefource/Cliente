@@ -84,6 +84,8 @@ while op != 0:
                 pausa_pt()
             else:
                 print('Opção inválida.')
+                pausa_pt()
+                limpa()
     elif idioma[0] == 'S':  # COMPARA APENAS A PRIMEIRA LETRA ESCRITA PELO USUÁRIO
         print('¡Ha seleccionado la opción en Español!')
         opt = 1
@@ -118,6 +120,8 @@ while op != 0:
                 pausa_es()
             else:
                 print('Opción no válida.')
+                pausa_es()
+                limpa()
     else:
         print('Opção inválida inserida.')
         print('Opción no válida ingresada.')
