@@ -1,4 +1,4 @@
-# PRIMEIRO PROTÓTIPO DA VERSÃO DO CLIENTE DO EVENTUM
+# PRIMEIRO PROTÓTIPO DA VERSÃO DE TOTEM DO CLIENTE DO EVENTUM
 
 import os
 import msvcrt
@@ -48,6 +48,7 @@ while op != 0:
     print('¿Te Gustaria la version en español?')
     # UPPER() -> TRANSFORMA TODAS OS CARACTERES INSERIDOS EM MAIÚSCULO
     idioma = input('S - Sim(Sí)\nN - Não(No)\n').upper()
+    limpa()
 
     if idioma[0] == 'N':  # COMPARA APENAS A PRIMEIRA LETRA ESCRITA PELO USUÁRIO
         print('Você selecionou a opção em Português!\n')
@@ -59,8 +60,7 @@ while op != 0:
             if opt == 1:
                 aux = 1
                 while aux != 0:
-                    pt = input(
-                        'Você já sabe o tipo de ponto turístico que está procurando?\n(S - Sim/N - Não)\n')
+                    pt = input('Você já sabe o tipo de ponto turístico que está procurando?\n(S - Sim/N - Não)\n')
                     if (pt[0]).upper() == 'S':
                         print('Jóia.')
                         aux = int(input('Pressione 0 para sair: '))
@@ -82,6 +82,7 @@ while op != 0:
             elif opt == 0:
                 print('Obrigado por usar o Eventum!')
                 pausa_pt()
+                op = 0
             else:
                 print('Opção inválida.')
                 pausa_pt()
@@ -92,11 +93,11 @@ while op != 0:
         while opt != 0:
             menu_es()   # CHAMA A FUNÇÃO MENU_ES
             opt = int(input('Seleccione una de las opciones y presione ENTER: '))
+            limpa()
             if opt == 1:
                 aux = 1
                 while aux != 0:
-                    pt = input(
-                        '¿Ya sabes el tipo de lugar turístico que estás buscando?\n(S - Sí/N - No)\n')
+                    pt = input('¿Ya sabes el tipo de lugar turístico que estás buscando?\n(S - Sí/N - No)\n')
                     if (pt[0]).upper() == 'S':
                         print('Joya.')
                         aux = int(input('Pulsa 0 para salir: '))
@@ -118,6 +119,7 @@ while op != 0:
             elif opt == 0:
                 print('¡Gracias por usar Eventum!')
                 pausa_es()
+                op = 0
             else:
                 print('Opción no válida.')
                 pausa_es()
