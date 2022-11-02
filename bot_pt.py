@@ -8,7 +8,7 @@ import funcoes
 def chat():
     func = True
     while func is True:
-        print('Olá! Eu sou o 🤖BOT🤖, vou te ajudar a escolher o ponto que te dará a melhor experiência!')
+        print('Olá! Eu sou a Iara, vou te ajudar a escolher o ponto que te dará a melhor experiência!')
         num = input('Primeiro me diga, você está viajando sozinho?\n(S - Sim/N - Não)\n')
         if (num[0]).upper() == 'S':
             print('Perfeito! Com quem você está viajando?')
