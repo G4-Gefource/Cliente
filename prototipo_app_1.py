@@ -114,7 +114,29 @@ while auxiliar is True:
                             funcoes.pausa_pt()
                             funcoes.limpa()
                     elif opt == 3:
-                        print('Deixe aqui seu Feedback do Eventum.')
+                        v = ['Como você avalia a facilidade de navegação do Eventum?',
+                             'Como você avalia o design do Eventum?', 'Como você avalia a praticidade do Eventum?',
+                             'Quão satisfeito você está com o uso do Eventum?']
+                        i = 0
+                        soma = 0.0
+                        while i in range(len(v)):
+                            print(v[i])
+                            a = float(input('Informe uma nota de 0 a 10: '))
+                            if a > 10 or a < 0:
+                                print('Esta nota não pode ser inserida.')
+                                i = i - 1
+                            else:
+                                soma = soma + a
+                                i = i + 1
+                        media = soma / len(v)
+                        print(f'Você avaliou o Eventum com média {media:.2f}.')
+                        print(f'Gostaria de deixar um comentário sobre o Eventum?')
+                        av = input('').upper()
+                        if av[0] == 'S':
+                            coment = input('Informe aqui seu comentário: ')
+                        print('Obrigado pela sua avaliação!')
+                        funcoes.pausa_pt()
+                        funcoes.limpa()
                     elif opt == 0:
                         print('Obrigado por usar o Eventum!')
                         funcoes.pausa_pt()
@@ -221,7 +243,29 @@ while auxiliar is True:
                         funcoes.pausa_es()
                         funcoes.limpa()
                 elif opt == 3:
-                    print('Deja tus comentarios de Eventum aquí.')
+                    v = ['¿Cómo califica la facilidad de navegación de Eventum?',
+                         '¿Cómo valoras el diseño de Eventum?', '¿Cómo califica la practicidad de Eventum?',
+                         '¿Qué tan satisfecho está con el uso de Eventum?']
+                    i = 0
+                    soma = 0.0
+                    while i in range(len(v)):
+                        print(v[i])
+                        a = float(input('Introduzca una puntuación de 0 a 10: '))
+                        if a > 10 or a < 0:
+                            print('Esta nota no se puede ingresar.')
+                            i = i - 1
+                        else:
+                            soma = soma + a
+                            i = i + 1
+                    media = soma / len(v)
+                    print(f'Calificaste Eventum con promedio {media:.2f}.')
+                    print(f'¿Quieres dejar un comentario sobre Eventum?')
+                    av = input('').upper()
+                    if av[0] == 'S':
+                        coment = input('Ingrese su comentario aquí: ')
+                    print('¡Gracias por tu valoración!')
+                    funcoes.pausa_es()
+                    funcoes.limpa()
                 elif opt == 0:
                     print('¡Gracias por usar Eventum!')
                     funcoes.pausa_es()
