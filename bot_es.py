@@ -1,6 +1,5 @@
 #  CHATBOT
 
-import os
 import msvcrt
 import funcoes
 
